@@ -18,6 +18,11 @@ describe('increment (option)', () => {
       increment,
     });
 
+    const minuteIncNumber = Math.abs(Number(increment));
+    const minutesInc = date.getMinutes() / minuteIncNumber;
+    const nearestMinute = (parseInt(minutesInc, 10) + 1) * minuteIncNumber;
+    date.setMinutes(nearestMinute);
+
     expect(Number(picker.picker.querySelector('.picker-picked[data-name="year"]').nextElementSibling.dataset.value)).to.equal(date.getFullYear() + increment);
     expect(Number(picker.picker.querySelector('.picker-picked[data-name="month"]').nextElementSibling.dataset.value)).to.equal(date.getMonth() + increment);
     expect(Number(picker.picker.querySelector('.picker-picked[data-name="day"]').nextElementSibling.dataset.value)).to.equal(date.getDate() + increment);
@@ -46,6 +51,11 @@ describe('increment (option)', () => {
         millisecond: increment,
       },
     });
+
+    const minuteIncNumber = Math.abs(Number(increment));
+    const minutesInc = date.getMinutes() / minuteIncNumber;
+    const nearestMinute = (parseInt(minutesInc, 10) + 1) * minuteIncNumber;
+    date.setMinutes(nearestMinute);
 
     expect(Number(picker.picker.querySelector('.picker-picked[data-name="year"]').nextElementSibling.dataset.value)).to.equal(date.getFullYear() + increment);
     expect(Number(picker.picker.querySelector('.picker-picked[data-name="month"]').nextElementSibling.dataset.value)).to.equal(date.getMonth() + increment);

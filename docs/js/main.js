@@ -134,6 +134,9 @@ window.onload = function () {
   new Picker(document.querySelector('.js-time-picker'), {
     format: 'HH:mm',
     headers: true,
+    increment: {
+      minute: 15,
+    },
     text: {
       title: 'Pick a time',
     },

@@ -3,7 +3,7 @@ const changeCase = require('change-case');
 const createBanner = require('create-banner');
 const pkg = require('./package');
 
-pkg.name = pkg.name.replace('js', '');
+pkg.name = 'picker';
 
 const name = changeCase.pascalCase(pkg.name);
 const banner = createBanner({

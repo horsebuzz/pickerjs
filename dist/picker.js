@@ -1,11 +1,11 @@
 /*!
- * Picker.js v1.2.1
+ * Picker.js v1.0.6
  * https://fengyuanchen.github.io/pickerjs
  *
- * Copyright 2016-present Chen Fengyuan
+ * Copyright 2016-present Bhavuk Suthar
  * Released under the MIT license
  *
- * Date: 2019-02-18T13:08:12.801Z
+ * Date: 2020-02-13T05:03:22.600Z
  */
 
 (function (global, factory) {
@@ -1534,6 +1534,13 @@
             second: increment,
             millisecond: increment
           };
+        }
+
+        if (increment.minute > 1) {
+          var minuteIncNumber = Math.abs(Number(increment.minute));
+          var minutesInc = date.getMinutes() / minuteIncNumber;
+          var nearestMinute = (parseInt(minutesInc, 10) + 1) * minuteIncNumber;
+          date.setMinutes(nearestMinute);
         }
 
         this.format.tokens.forEach(function (token) {

@@ -151,7 +151,12 @@ class Picker {
         millisecond: increment,
       };
     }
-
+    if (increment.minute > 1) {
+      const minuteIncNumber = Math.abs(Number(increment.minute));
+      const minutesInc = date.getMinutes() / minuteIncNumber;
+      const nearestMinute = (parseInt(minutesInc, 10) + 1) * minuteIncNumber;
+      date.setMinutes(nearestMinute);
+    }
     this.format.tokens.forEach((token) => {
       const type = tokenToType(token);
       const cell = document.createElement('div');
