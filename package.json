@@ -1,6 +1,6 @@
 {
   "name": "global-it-pickerjs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "JavaScript date time picker.",
   "main": "dist/picker.common.js",
   "module": "dist/picker.esm.js",

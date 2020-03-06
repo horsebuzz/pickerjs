@@ -1,11 +1,11 @@
 /*!
- * Picker.js v1.0.6
+ * Picker.js v1.0.7
  * https://fengyuanchen.github.io/pickerjs
  *
  * Copyright 2016-present Bhavuk Suthar
  * Released under the MIT license
  *
- * Date: 2020-02-13T05:03:22.600Z
+ * Date: 2020-03-06T07:28:40.982Z
  */
 
 (function (global, factory) {
